@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"authservice/controller"
-	"authservice/model"
+	"github.com/EvgenyiK/authservice/controller"
+	//"github.com/EvgenyiK/authservice/model"
 
 	"github.com/gorilla/mux"
 )

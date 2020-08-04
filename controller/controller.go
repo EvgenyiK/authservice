@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"authservice/config/db"
-	"authservice/model"
+	"github.com/EvgenyiK/authservice/config/db"
+	"github.com/EvgenyiK/authservice/model"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -134,8 +134,8 @@ func ProfileHandler(w http.ResponseWriter, r *http.Request)  {
 	var res model.ResponseResult
 	if claims,ok:= token.Claims.(jwt.MapClaims); ok && token.Valid{
 		result.Username = claims["username"].(string)
-		result.Firstname = claims["firstname"].(string)
-		result.Lastname = claims["lastname"].(string)
+		result.FirstName = claims["firstname"].(string)
+		result.LastName = claims["lastname"].(string)
 
 		json.NewEncoder(w).Encode(result)
 		return
