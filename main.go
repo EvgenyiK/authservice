@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"goLogin/controller"
-	"gologin/model"
+	"authservice/controller"
+	"authservice/model"
 
 	"github.com/gorilla/mux"
 )
